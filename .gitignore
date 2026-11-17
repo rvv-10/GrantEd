@@ -1,0 +1,52 @@
+# --- Secrets and local config (never commit) ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+*.egg-info/
+dist/
+build/
+
+# --- Node / frontend ---
+node_modules/
+frontend/dist/
+*.log
+npm-debug.log*
+
+# --- Terraform (for v1.1; ignore state from day one) ---
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+!*.tfvars.example
+
+# --- Database dumps and backups ---
+*.sql
+*.dump
+backups/
+
+# --- Claude Code personal files (shared config in .claude/settings.json IS committed) ---
+.claude/settings.local.json
+CLAUDE.local.md
+
+# --- Editors and OS ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# --- Playwright (Week 6) ---
+test-results/
+playwright-report/
